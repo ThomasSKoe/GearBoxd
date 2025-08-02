@@ -1,0 +1,59 @@
+[
+    {
+        "make": "Ford",
+        "model": "Mustang",
+        "year": 2025
+    },
+
+    {
+        "make": "Mazda",
+        "model": "MX-5",
+        "year": 2024
+    },
+    {
+        "make": "Lotus",
+        "model": "Emira",
+        "year": 2025
+    },
+    {
+        "make": "Audi",
+        "model": "A8",
+        "year": 2019
+    },
+    {
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "year": 1994
+    },
+    {
+        "make": "BMW",
+        "model": "M2",
+        "year": 2025
+    },
+    {
+        "make": "Dodge",
+        "model": "Challenger",
+        "year": 2023
+    },
+    {
+        "make": "Aston Martin",
+        "model": "Vantage",
+        "year": 2025
+    },
+    {
+        "make": "Aston Martin",
+        "model": "DBX",
+        "year": 2025
+    },
+    {
+        "make": "Porche",
+        "model": "911 S/T",
+        "year": 2025
+    },
+    {
+        "make": "Mercedes",
+        "model": "AMG GT",
+        "year": 2025
+    }
+
+]
