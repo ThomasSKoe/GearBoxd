@@ -2,36 +2,51 @@
     {
         "make": "Ford",
         "model": "Mustang GT",
-        "cyl": 8,
+        "engine": "V8",
         "hp": 480,
         "year": 2025
     },
+    {
+        "make": "Koenigsegg",
+        "model": "Jesko",
+        "engine": "V8",
+        "hp": 1600,
+        "year": 2020
 
+    },
     {
         "make": "Mazda",
         "model": "MX-5",
-        "cyl": 4,
+        "engine": "I4",
         "hp": 181,
         "year": 2025
 
     },
     {
+        "make": "Mazda",
+        "model": "RX-7",
+        "engine": "Rotor",
+        "hp": 225,
+        "year": 1995
+    },
+    {
         "make": "Lotus",
         "model": "Emira",
-        "cyl": 6,
+        "engine": "V6",
         "hp": 400,
         "year": 2025
     },
     {
         "make": "Audi",
         "model": "A8",
-        "cyl": 8,
+        "engine": "V8",
         "hp": 335,
         "year": 2019
     },
     {
         "make": "Chevrolet",
         "model": "Corvette",
+
         "year": 1994
     },
     {
@@ -63,6 +78,22 @@
         "make": "Mercedes",
         "model": "AMG GT",
         "year": 2025
+    },
+    {
+        "make": "Bugatti",
+        "model": "Chiron Super Sport",
+        "engine": "W16",
+        "hp": 1578,
+        "year": 2016
+
+    },
+     {
+        "make": "Bugatti",
+        "model": "Tourbillion",
+        "engine": "V16",
+        "hp": 1800,
+        "year": 2026
+
     }
 
 ]

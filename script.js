@@ -23,7 +23,6 @@ fetch('cars.json')
         });
 
 
-
     })
     .catch(error => {
         console.error("Error", error);
@@ -80,13 +79,21 @@ function createCard(car) {
     const yearEl = document.createElement("div");
     yearEl.innerText = car.year;
 
+    const statsEl = document.createElement("div");
+    //seperated so i can bold hp and engine size
+    statsEl.innerHTML = `HP: <span class="statValue">${car.hp}</span>,
+                    Engine: <span class="statValue">${car.engine}</span>`;
+
+
     makeEl.classList.add("make");
     modelEl.classList.add("model");
     yearEl.classList.add("year");
+    statsEl.classList.add("stats");
 
     card.appendChild(makeEl);
     card.appendChild(modelEl);
     card.appendChild(yearEl);
+    card.appendChild(statsEl);
 
     // card.innerText = `${car.make} ${car.model} ${car.year}`
 
