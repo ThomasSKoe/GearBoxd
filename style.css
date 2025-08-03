@@ -2,13 +2,13 @@ body {
     font-family: monospace;
     margin: 0;
     padding: 0;
-    background: #e7e7e7;
+    background: #1D232A;
 }
 
 header {
-    background: #222;
+    background: #0E1217;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
@@ -23,14 +23,14 @@ header {
     background-color: #7298cd;
     padding: 1rem;
     border-radius: 1rem;
-    position:relative;
+    position: relative;
 }
 
 .make {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2rem;
-    position: absolute; 
+    position: absolute;
     top: 0.5rem;
     right: 0.8rem;
 }
@@ -38,7 +38,7 @@ header {
 .model {
     font-size: 1rem;
     text-transform: uppercase;
-    
+
 }
 
 .year {
@@ -47,18 +47,33 @@ header {
 }
 
 #searchInput {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem 1rem;
-  margin: 1rem auto;
-  display: block;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 0.5rem;
-  outline: none;
-  transition: border 0.2s ease;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border 0.2s ease;
 }
 
 #searchInput:focus {
-  border-color: #7298cd;
+    border-color: #7298cd;
 }
+
+#makeSelect {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border 0.2s ease;
+    justify-content: center;
+}
+

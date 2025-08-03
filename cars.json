@@ -1,23 +1,32 @@
 [
     {
         "make": "Ford",
-        "model": "Mustang",
+        "model": "Mustang GT",
+        "cyl": 8,
+        "hp": 480,
         "year": 2025
     },
 
     {
         "make": "Mazda",
         "model": "MX-5",
-        "year": 2024
+        "cyl": 4,
+        "hp": 181,
+        "year": 2025
+
     },
     {
         "make": "Lotus",
         "model": "Emira",
+        "cyl": 6,
+        "hp": 400,
         "year": 2025
     },
     {
         "make": "Audi",
         "model": "A8",
+        "cyl": 8,
+        "hp": 335,
         "year": 2019
     },
     {
@@ -46,7 +55,7 @@
         "year": 2025
     },
     {
-        "make": "Porche",
+        "make": "Porsche",
         "model": "911 S/T",
         "year": 2025
     },

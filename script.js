@@ -8,13 +8,33 @@ fetch('cars.json')
 
         allCars = carData;
         renderCards(allCars);
+
+        //determines all the unique brands
+        const uniqueMakes = [...new Set(carData.map(car => car.make))];
+        console.log(uniqueMakes);
+
+        //makes the select brand/make dropdown
+        const makeSelect = document.getElementById("makeSelect");
+        uniqueMakes.forEach(make => {
+            const option = document.createElement("option");
+            option.value = make;
+            option.textContent = make;
+            makeSelect.appendChild(option);
+        });
+
+
+
     })
     .catch(error => {
         console.error("Error", error);
     });
 
-const searchInput = document.getElementById("searchInput");
 
+
+const makeSelect = document.getElementById("makeSelect");
+makeSelect.addEventListener("change", handleSelect);
+
+const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearch);
 
 //handles the search function
@@ -23,7 +43,7 @@ function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredCars = allCars.filter(car => {
         return (
-            car.make.toLowerCase().includes(searchTerm) || car.model.toLowerCase().includes(searchTerm)
+            car.model.toLowerCase().includes(searchTerm)
         );
     });
 
@@ -72,3 +92,28 @@ function createCard(car) {
 
     return card
 }
+
+//handles what to do when select is changes
+function handleSelect() {
+    const selectedMake = this.value;
+
+    //makes it so it doesnt updated until the user selects something
+    if (!selectedMake) return;
+
+    getModelsByMake(selectedMake);
+    console.log(selectedMake);
+
+}
+
+//gets all the models from one brand
+function getModelsByMake(getMake) {
+    if(getMake == "any") {
+        renderCards(allCars);
+    } else {
+    const models = allCars.filter(car => car.make == getMake);
+    renderCards(models);
+    }
+
+}
+
+
