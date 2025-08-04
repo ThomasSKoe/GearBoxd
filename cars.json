@@ -7,6 +7,13 @@
         "year": 2025
     },
     {
+        "make": "Ford",
+        "model": "Mustang GTD",
+        "engine": "V8",
+        "hp": 520,
+        "year": 2025
+    },
+    {
         "make": "Koenigsegg",
         "model": "Jesko",
         "engine": "V8",
@@ -30,6 +37,13 @@
         "year": 1995
     },
     {
+        "make": "Honda",
+        "model": "S2000",
+        "engine": "I4",
+        "hp": 237,
+        "year": 2009
+    },
+    {
         "make": "Lotus",
         "model": "Emira",
         "engine": "V6",
@@ -45,13 +59,16 @@
     },
     {
         "make": "Chevrolet",
-        "model": "Corvette",
-
+        "model": "Corvette C4",
+        "engine": "V8",
+        "hp": 300,
         "year": 1994
     },
     {
         "make": "BMW",
         "model": "M2",
+        "engine": "I6",
+        "hp": 473,
         "year": 2025
     },
     {
@@ -62,11 +79,36 @@
     {
         "make": "Aston Martin",
         "model": "Vantage",
+        "engine": "V8",
+        "hp": 665,
         "year": 2025
     },
     {
         "make": "Aston Martin",
-        "model": "DBX",
+        "model": "DB12",
+        "engine": "V12",
+        "hp": 680,
+        "year": 2025
+    },
+    {
+        "make": "Aston Martin",
+        "model": "Valkrie",
+        "engine": "V12",
+        "hp": 1140,
+        "year": 2025
+    },
+    {
+        "make": "Aston Martin",
+        "model": "Valiant",
+        "engine": "V12",
+        "hp": 745,
+        "year": 2025
+    },
+    {
+        "make": "Aston Martin",
+        "model": "Valhala",
+        "engine": "V8",
+        "hp": 1079,
         "year": 2025
     },
     {

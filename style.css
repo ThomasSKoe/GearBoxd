@@ -10,6 +10,8 @@ header {
     color: white;
     padding: 0.5rem;
     text-align: center;
+    font-size: 1.2rem;
+    
 }
 
 #carList {
@@ -97,3 +99,24 @@ header {
     justify-content: center;
 }
 
+.logoWrapper {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-self: right;
+    overflow: hidden;
+    margin-top: 1.25rem;
+    margin-right: -0.4rem;
+    margin-bottom: -1.5rem;
+    box-sizing: border-box;
+
+
+}
+
+.logoImage {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    
+
+}

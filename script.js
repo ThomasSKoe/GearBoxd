@@ -69,6 +69,27 @@ function createCard(car) {
     const card = document.createElement("div");
     card.classList.add("carCard");
 
+
+
+    const logoWrapper = document.createElement("div");
+    logoWrapper.classList.add("logoWrapper");
+
+    const logoImage = document.createElement("img");
+    logoImage.classList.add("logoImage");
+
+    const logoFile = car.make.toLowerCase().replace(/\s+/g, "-") + ".png";
+    logoImage.src = `logos/${logoFile}`;
+    logoImage.alt = `${car.make} logo`;
+
+    //default image
+    logoImage.onerror = () => {
+        logoImage.src = "logos/default.png";
+    };
+
+    logoWrapper.appendChild(logoImage);
+    card.appendChild(logoWrapper);
+
+
     //creates seperate divs for styling
     const makeEl = document.createElement("div");
     makeEl.innerText = car.make;
