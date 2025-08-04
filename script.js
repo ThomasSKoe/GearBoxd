@@ -4,14 +4,12 @@ let allCars = [];
 fetch('cars.json')
     .then(response => response.json())
     .then(carData => {
-        console.log("Car data loaded:", carData);
 
         allCars = carData;
         renderCards(allCars);
 
         //determines all the unique brands
         const uniqueMakes = [...new Set(carData.map(car => car.make))];
-        console.log(uniqueMakes);
 
         //makes the select brand/make dropdown
         const makeSelect = document.getElementById("makeSelect");
@@ -73,6 +71,7 @@ function createCard(car) {
     const ratingContainer = document.createElement("div");
     ratingContainer.classList.add("ratingContainer");
 
+    //creates the buttons
     for(let i = 1; i < 11; i++) {
         const ratingButton = document.createElement("button");
         ratingButton.classList.add("ratingButton");
@@ -84,12 +83,24 @@ function createCard(car) {
 
             ratingButton.classList.add("selected");
 
-            console.log(`Rated ${car.make} ${car.model} a ${i}/10`);
+            const carKey = `${car.make}-${car.model}`;
+            localStorage.setItem(carKey,i);
+            console.log(carKey + " " + i);
 
         });
-
         ratingContainer.appendChild(ratingButton);
+    }
 
+
+    //takes the ratings form local storage and saves across accesses
+    const carKey = `${car.make}-${car.model}`;
+    const savedRating = localStorage.getItem(carKey);
+
+    if(savedRating) {
+        const selectedButton = ratingContainer.querySelector(`.ratingButton:nth-child(${savedRating})`);
+            if(selectedButton) {
+                selectedButton.classList.add("selected");
+            }
     }
 
     card.appendChild(ratingContainer);
@@ -167,7 +178,6 @@ function handleSelect() {
     if (!selectedMake) return;
 
     getModelsByMake(selectedMake);
-    console.log(selectedMake);
 
 }
 

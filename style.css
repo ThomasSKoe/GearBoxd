@@ -168,10 +168,12 @@ header {
     border-radius: 20%;    
     font-weight: bold;
 
+    background-color: rgb(227, 227, 227);
 
 
-    transition: background-color 0.2s ease;
-    transition: transform 0.2s ease;
+
+    transition: background-color 0.2s ease,transform 0.2s ease;
+
 
 }
 
