@@ -69,6 +69,24 @@ function createCard(car) {
     const card = document.createElement("div");
     card.classList.add("carCard");
 
+    
+    
+
+
+
+
+
+
+
+    const buttonContainer = document.createElement("div");
+    buttonContainer.classList.add("buttonContainer");
+
+    const likeButton = document.createElement("button");
+    likeButton.classList.add("likeButton");
+    likeButton.textContent = "♥️";
+
+       buttonContainer.appendChild(likeButton);
+    card.appendChild(buttonContainer);
 
 
     const logoWrapper = document.createElement("div");
