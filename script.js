@@ -70,9 +70,29 @@ function createCard(car) {
     card.classList.add("carCard");
 
     
-    
+    const ratingContainer = document.createElement("div");
+    ratingContainer.classList.add("ratingContainer");
 
+    for(let i = 1; i < 11; i++) {
+        const ratingButton = document.createElement("button");
+        ratingButton.classList.add("ratingButton");
+        ratingButton.textContent = i;
 
+        ratingButton.addEventListener("click", () => {
+            const allButtons = ratingContainer.querySelectorAll(".ratingButton");
+            allButtons.forEach(btn => btn.classList.remove("selected"));
+
+            ratingButton.classList.add("selected");
+
+            console.log(`Rated ${car.make} ${car.model} a ${i}/10`);
+
+        });
+
+        ratingContainer.appendChild(ratingButton);
+
+    }
+
+    card.appendChild(ratingContainer);
 
 
 

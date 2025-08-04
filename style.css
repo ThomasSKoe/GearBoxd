@@ -152,3 +152,34 @@ header {
 .likeButton:hover{
     transform: translateY(-3px);
 }
+
+.ratingContainer {
+    display: flex;
+    gap: 2px;
+    position: absolute;
+    bottom: 1rem;
+
+}
+.ratingButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 20%;    
+    font-weight: bold;
+
+
+
+    transition: background-color 0.2s ease;
+    transition: transform 0.2s ease;
+
+}
+
+.ratingButton:hover {
+    transform: translateY(-2px);
+
+}
+
+.ratingButton.selected {
+    background-color: #7ff89f;
+}
