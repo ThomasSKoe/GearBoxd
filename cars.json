@@ -10,7 +10,7 @@
         "make": "Ford",
         "model": "Mustang GTD",
         "engine": "V8",
-        "hp": 520,
+        "hp": 815,
         "year": 2025
     },
     {
@@ -73,7 +73,9 @@
     },
     {
         "make": "Dodge",
-        "model": "Challenger",
+        "model": "Challenger SRT Hellcat",
+        "engine": "V8",
+        "hp": 717,
         "year": 2023
     },
     {
@@ -114,11 +116,15 @@
     {
         "make": "Porsche",
         "model": "911 S/T",
+        "engine": "Flat-6",
+        "hp": 518,
         "year": 2025
     },
     {
         "make": "Mercedes",
-        "model": "AMG GT",
+        "model": "AMG GT Black Series",
+        "engine": "V8",
+        "hp": 720,
         "year": 2025
     },
     {
@@ -136,6 +142,13 @@
         "hp": 1800,
         "year": 2026
 
+    },
+    {
+        "make": "Toyota",
+        "model": "Prius",
+        "engine": "I4",
+        "hp": 196,
+        "year": 2025
     }
 
 ]
