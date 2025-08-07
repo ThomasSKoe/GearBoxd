@@ -149,6 +149,22 @@
         "engine": "I4",
         "hp": 196,
         "year": 2025
+    },
+    {
+        "make": "Ferrari",
+        "model": "Daytona SP3",
+        "engine": "V12",
+        "hp": 829,
+        "year": 2025
+    },
+    {
+        "make": "Nissan",
+        "model": "GTR",
+        "engine": "V6",
+        "hp": 565,
+        "year": 2024
     }
+
+
 
 ]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>GearBoxd</title>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+
+</head>
+
+
+<body>
+
+    <header>
+        <h1>GearBoxd </h1>
+    </header>
+
+    <main>
+        <select id="makeSelect">
+            <option value="any"> -- Select Make / Any Brand -- </option>"
+        </select>
+        <input type="text" id="searchInput" placeHolder="Search by model...">
+
+        <div id="carList"></div>
+
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>

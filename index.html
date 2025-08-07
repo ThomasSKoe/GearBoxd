@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href="landing.css">
     <title>GearBoxd</title>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
 
 
 </head>
@@ -12,21 +16,22 @@
 
 <body>
 
-    <header>
-    <h1>GearBoxd </h1>
-    </header>
+    <h1>Welcome to GearBoxd!</h1>
+    <p>Create an account or browse as a guest to start raating!</p>
 
-    <main>
-        <select id="makeSelect">
-            <option value="any"> -- Select Make / Any Brand -- </option>"
-        </select>
-        <input type="text" id="searchInput" placeHolder="Search by model...">
+    <input type="text" id="username" placeholder="Username" autocomplete="off">
+    <input type="password" id="password" placeholder="Password">
 
-        <div id="carList"></div>
+    <button id="loginButton">Login</button>
+    <button id="signupButton">Create Account</button>
+    <button id="guestButton">Browse as Guest</button>
 
-    </main>
+    <div id="status"></div>
 
 
-    <script src="script.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="landing.js"></script>
 </body>
+
+
 </html>

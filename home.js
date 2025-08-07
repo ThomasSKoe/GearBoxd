@@ -1,32 +1,44 @@
 
 let allCars = [];
 
-fetch('cars.json')
-    .then(response => response.json())
-    .then(carData => {
+let currentUser = null;
 
-        allCars = carData;
-        renderCards(allCars);
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = user;
+        console.log("Logged in as:", user.uid);
+    } else {
+        currentUser = null;
+        console.log("Browsing as guest");
+    }
 
-        //determines all the unique brands
-        const uniqueMakes = [...new Set(carData.map(car => car.make))];
 
-        //makes the select brand/make dropdown
-        const makeSelect = document.getElementById("makeSelect");
-        uniqueMakes.forEach(make => {
-            const option = document.createElement("option");
-            option.value = make;
-            option.textContent = make;
-            makeSelect.appendChild(option);
+    fetch('cars.json')
+        .then(response => response.json())
+        .then(carData => {
+
+            allCars = carData;
+            renderCards(allCars);
+
+            //determines all the unique brands
+            const uniqueMakes = [...new Set(carData.map(car => car.make))];
+
+            //makes the select brand/make dropdown
+            const makeSelect = document.getElementById("makeSelect");
+            uniqueMakes.forEach(make => {
+                const option = document.createElement("option");
+                option.value = make;
+                option.textContent = make;
+                makeSelect.appendChild(option);
+            });
+
+
+        })
+        .catch(error => {
+            console.error("Error", error);
         });
 
-
-    })
-    .catch(error => {
-        console.error("Error", error);
-    });
-
-
+});
 
 const makeSelect = document.getElementById("makeSelect");
 makeSelect.addEventListener("change", handleSelect);
@@ -67,25 +79,41 @@ function createCard(car) {
     const card = document.createElement("div");
     card.classList.add("carCard");
 
-    
+
     const ratingContainer = document.createElement("div");
     ratingContainer.classList.add("ratingContainer");
 
+    const carIdKey = `${car.make}-${car.model}-${car.year}`.toLowerCase().replace(/\s+/g, '-');
+
+
     //creates the buttons
-    for(let i = 1; i < 11; i++) {
+    for (let i = 1; i < 11; i++) {
         const ratingButton = document.createElement("button");
         ratingButton.classList.add("ratingButton");
         ratingButton.textContent = i;
 
         ratingButton.addEventListener("click", () => {
+
             const allButtons = ratingContainer.querySelectorAll(".ratingButton");
             allButtons.forEach(btn => btn.classList.remove("selected"));
-
             ratingButton.classList.add("selected");
 
-            const carKey = `${car.make}-${car.model}`;
-            localStorage.setItem(carKey,i);
-            console.log(carKey + " " + i);
+
+            //stores the selected value in localstorage if not logged in
+            if (currentUser) {
+                const db = firebase.firestore();
+                const ratingRef = db.collection("ratings").doc(currentUser.uid);
+
+                ratingRef.set({
+                    [carIdKey]: i
+                }, { merge: true })
+                    .then(() => console.log("firestore rating saved:", carIdKey, i))
+                    .catch(err => console.error("firestore error:", err));
+            } else {
+                localStorage.setItem(carIdKey, i);
+                console.log("localStorage rating saved:", carIdKey, i);
+            }
+
 
         });
         ratingContainer.appendChild(ratingButton);
@@ -93,15 +121,30 @@ function createCard(car) {
 
 
     //takes the ratings form local storage and saves across accesses
-    const carKey = `${car.make}-${car.model}`;
-    const savedRating = localStorage.getItem(carKey);
+    if (currentUser) {
+        const db = firebase.firestore();
+        const ratingRef = db.collection("ratings").doc(currentUser.uid);
 
-    if(savedRating) {
-        const selectedButton = ratingContainer.querySelector(`.ratingButton:nth-child(${savedRating})`);
-            if(selectedButton) {
-                selectedButton.classList.add("selected");
-            }
+        ratingRef.get()
+            .then(doc => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    const savedRating = data[carIdKey];
+                    if (savedRating) {
+                        const selectedButton = ratingContainer.querySelector(`.ratingButton:nth-child(${savedRating})`);
+                        if (selectedButton) selectedButton.classList.add("selected");
+                    }
+                }
+            })
+            .catch(err => console.error("Firestore fetch error:", err));
+    } else {
+        const savedRating = localStorage.getItem(carIdKey);
+        if (savedRating) {
+            const selectedButton = ratingContainer.querySelector(`.ratingButton:nth-child(${savedRating})`);
+            if (selectedButton) selectedButton.classList.add("selected");
+        }
     }
+
 
     card.appendChild(ratingContainer);
 
@@ -116,7 +159,7 @@ function createCard(car) {
     likeButton.classList.add("likeButton");
     likeButton.textContent = "♥️";
 
-       buttonContainer.appendChild(likeButton);
+    buttonContainer.appendChild(likeButton);
     card.appendChild(buttonContainer);
 
 
@@ -183,13 +226,24 @@ function handleSelect() {
 
 //gets all the models from one brand
 function getModelsByMake(getMake) {
-    if(getMake == "any") {
+    if (getMake == "any") {
         renderCards(allCars);
     } else {
-    const models = allCars.filter(car => car.make == getMake);
-    renderCards(models);
+        const models = allCars.filter(car => car.make == getMake);
+        renderCards(models);
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
