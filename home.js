@@ -198,11 +198,10 @@ function createCard(car) {
             ratingRef.set({
                 [likedKey]: isLiked
             }, { merge: true })
-                .then(() => console.log("✔️ Like saved:", likedKey, isLiked))
-                .catch(err => console.error("❌ Firestore like save error:", err));
+                .then(() => console.log("like saved:", likedKey, isLiked))
+                .catch(err => console.error("irestore like save error:", err));
         } else {
             localStorage.setItem(likedKey, isLiked);
-            console.log("💾 Like saved to localStorage:", likedKey, isLiked);
         }
     });
 
@@ -286,9 +285,12 @@ function handleSelect() {
 function getModelsByMake(getMake) {
     if (getMake == "any") {
         renderCards(allCars);
+    } else if (getMake == "favorites") {
+        filterFavorites();
     } else {
         const models = allCars.filter(car => car.make == getMake);
         renderCards(models);
+
     }
 
 }
@@ -296,6 +298,47 @@ function getModelsByMake(getMake) {
 
 
 
+function filterFavorites() {
+    const likedKeys = new Set();
+
+    if (currentUser) {
+        const db = firebase.firestore();
+        const ratingRef = db.collection("ratings").doc(currentUser.uid);
+
+        ratingRef.get().then(doc => {
+            if (doc.exists) {
+                const data = doc.data();
+
+                Object.keys(data).forEach(key => {
+                    if (key.startsWith("liked-") && data[key] === true) {
+                        likedKeys.add(key.replace("liked-", ""));
+                    }
+                });
+
+                const likedCars = allCars.filter(car => {
+                    const key = `${car.make}-${car.model}-${car.year}`.toLowerCase().replace(/\s+/g, '-');
+                    return likedKeys.has(key);
+                });
+
+                renderCards(likedCars);
+            }
+        }).catch(err => console.error("error fetching favorites:", err));
+    } else {
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith("liked-") && localStorage.getItem(key) === "true") {
+                likedKeys.add(key.replace("liked-", ""));
+            }
+        }
+
+        const likedCars = allCars.filter(car => {
+            const key = `${car.make}-${car.model}-${car.year}`.toLowerCase().replace(/\s+/g, '-');
+            return likedKeys.has(key);
+        });
+
+        renderCards(likedCars);
+    }
+}
 
 
 
