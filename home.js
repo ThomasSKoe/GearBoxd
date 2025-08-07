@@ -3,13 +3,16 @@ let allCars = [];
 
 let currentUser = null;
 
+const userStatus = document.getElementById("userStatus");
+
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = user;
-        console.log("Logged in as:", user.uid);
+        const username = user.email.split("@")[0];
+        userStatus.textContent = `Logged in as: ${username}`;
     } else {
         currentUser = null;
-        console.log("Browsing as guest");
+        userStatus.textContent = "Browsing as Guest, ratings will be stored in local storage";
     }
 
 
@@ -150,6 +153,7 @@ function createCard(car) {
 
 
 
+    const likedKey = `liked-${carIdKey}`;
 
 
     const buttonContainer = document.createElement("div");
@@ -157,10 +161,64 @@ function createCard(car) {
 
     const likeButton = document.createElement("button");
     likeButton.classList.add("likeButton");
-    likeButton.textContent = "♥️";
+    likeButton.textContent = "♡";
+
+
+    if (currentUser) {
+        const db = firebase.firestore();
+        const ratingRef = db.collection("ratings").doc(currentUser.uid);
+
+        ratingRef.get().then(doc => {
+            if (doc.exists) {
+                const data = doc.data();
+                if (data[likedKey]) {
+                    likeButton.classList.add("liked");
+                    likeButton.textContent = "♥️";
+                }
+            }
+        }).catch(err => console.error("firestore like fetch error:", err));
+    } else {
+        const liked = localStorage.getItem(likedKey);
+        if (liked === "true") {
+            likeButton.classList.add("liked");
+            likeButton.textContent = "♥️";
+        }
+    }
+
+
+
+    likeButton.addEventListener("click", () => {
+        const isLiked = likeButton.classList.toggle("liked");
+        likeButton.textContent = isLiked ? "♥️" : "♡";
+
+        if (currentUser) {
+            const db = firebase.firestore();
+            const ratingRef = db.collection("ratings").doc(currentUser.uid);
+
+            ratingRef.set({
+                [likedKey]: isLiked
+            }, { merge: true })
+                .then(() => console.log("✔️ Like saved:", likedKey, isLiked))
+                .catch(err => console.error("❌ Firestore like save error:", err));
+        } else {
+            localStorage.setItem(likedKey, isLiked);
+            console.log("💾 Like saved to localStorage:", likedKey, isLiked);
+        }
+    });
+
+
+
+
+
+
 
     buttonContainer.appendChild(likeButton);
     card.appendChild(buttonContainer);
+
+
+
+
+
 
 
     const logoWrapper = document.createElement("div");
