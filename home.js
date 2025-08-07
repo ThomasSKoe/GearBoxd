@@ -301,11 +301,16 @@ function getModelsByMake(getMake) {
 function filterFavorites() {
     const likedKeys = new Set();
 
+
+    //if logged in 
     if (currentUser) {
+        //database
         const db = firebase.firestore();
+        //reference to ratings
         const ratingRef = db.collection("ratings").doc(currentUser.uid);
 
         ratingRef.get().then(doc => {
+            //if the like exist
             if (doc.exists) {
                 const data = doc.data();
 
@@ -314,15 +319,18 @@ function filterFavorites() {
                         likedKeys.add(key.replace("liked-", ""));
                     }
                 });
-
+                //returns keys with likes
                 const likedCars = allCars.filter(car => {
                     const key = `${car.make}-${car.model}-${car.year}`.toLowerCase().replace(/\s+/g, '-');
                     return likedKeys.has(key);
                 });
 
+                //renders only rhe linked cars
                 renderCards(likedCars);
             }
         }).catch(err => console.error("error fetching favorites:", err));
+
+        //if using localstorage / logged in as guest
     } else {
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
@@ -339,12 +347,3 @@ function filterFavorites() {
         renderCards(likedCars);
     }
 }
-
-
-
-
-
-
-
-
-
