@@ -49,6 +49,13 @@
         "year": 2025
     },
     {
+        "make": "Ford",
+        "model": "Mustang Mach-E",
+        "engine": "Eletric",
+        "hp": 266,
+        "year": 2025
+    },
+    {
         "make": "Shelby",
         "model": "Cobra",
         "engine": "V8",
