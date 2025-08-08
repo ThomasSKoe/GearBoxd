@@ -14,12 +14,109 @@
         "year": 2025
     },
     {
+        "make": "Ford",
+        "model": "GT Mk IV",
+        "engine": "V6",
+        "hp": 700,
+        "year": 2023
+    },
+    {
+        "make": "Ford",
+        "model": "GT40",
+        "engine": "V8",
+        "hp": 390,
+        "year": 1966
+    },
+    {
+        "make": "Ford",
+        "model": "Shelby GT500",
+        "engine": "V8",
+        "hp": 760,
+        "year": 2022
+    },
+    {
+        "make": "Ford",
+        "model": "Boss 302",
+        "engine": "V8",
+        "hp": 290,
+        "year": 1969
+    },
+    {
+        "make": "Ford",
+        "model": "F-150 Raptor R",
+        "engine": "V8",
+        "hp": 720,
+        "year": 2025
+    },
+    {
+        "make": "Shelby",
+        "model": "Cobra",
+        "engine": "V8",
+        "hp": 485,
+        "year": 1965
+    },
+    {
+        "make": "Hennessey",
+        "model": "Venom F5",
+        "engine": "V8",
+        "hp": 1817,
+        "year": 2026
+    },
+    {
+        "make": "De Tomaso",
+        "model": "P72",
+        "engine": "V8",
+        "hp": 700,
+        "year": 2016
+    },
+    {
         "make": "Koenigsegg",
-        "model": "Jesko",
+        "model": "Jesko Absolut",
         "engine": "V8",
         "hp": 1600,
+        "year": 2025
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "CC8s",
+        "engine": "V8",
+        "hp": 655,
+        "year": 2002
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "Agera RS",
+        "engine": "V8",
+        "hp": 1341,
+        "year": 2018
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "One:1",
+        "engine": "V8",
+        "hp": 1341,
+        "year": 2014
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "Regera",
+        "engine": "V8",
+        "hp": 1500,
+        "year": 2022
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "CC850",
+        "engine": "V8",
+        "hp": 1385,
+        "year": 2025
+    },
+    {
+        "make": "Koenigsegg",
+        "model": "Gemera",
+        "engine": "I3",
+        "hp": 1700,
         "year": 2020
-
     },
     {
         "make": "Mazda",
@@ -27,7 +124,6 @@
         "engine": "I4",
         "hp": 181,
         "year": 2025
-
     },
     {
         "make": "Mazda",
@@ -44,11 +140,88 @@
         "year": 2009
     },
     {
+        "make": "Honda",
+        "model": "Civic Type R",
+        "engine": "I4",
+        "hp": 315,
+        "year": 2025
+    },
+    {
+        "make": "Honda",
+        "model": "NSX",
+        "engine": "V6",
+        "hp": 290,
+        "year": 1990
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Revuelto",
+        "engine": "V12",
+        "hp": 1001,
+        "year": 2025
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Countach",
+        "engine": "V12",
+        "hp": 455,
+        "year": 1985
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Diablo",
+        "engine": "V12",
+        "hp": 550,
+        "year": 2001
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Aventador",
+        "engine": "V12",
+        "hp": 720,
+        "year": 2022
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Gallardo",
+        "engine": "V10",
+        "hp": 570,
+        "year": 2013
+    },
+    {
+        "make": "Lamborghini",
+        "model": "Huracán",
+        "engine": "V10",
+        "hp": 640,
+        "year": 2024
+    },
+    {
         "make": "Lotus",
         "model": "Emira",
         "engine": "V6",
         "hp": 400,
         "year": 2025
+    },
+    {
+        "make": "Lotus",
+        "model": "Elan",
+        "engine": "I4",
+        "hp": 130,
+        "year": 1962
+    },
+    {
+        "make": "Lotus",
+        "model": "Elise",
+        "engine": "I4",
+        "hp": 118,
+        "year": 2001
+    },
+    {
+        "make": "Lotus",
+        "model": "Evora GT",
+        "engine": "V6",
+        "hp": 416,
+        "year": 2021
     },
     {
         "make": "Audi",
@@ -58,6 +231,62 @@
         "year": 2019
     },
     {
+        "make": "Audi",
+        "model": "R8",
+        "engine": "V10",
+        "hp": 610,
+        "year": 2023
+    },
+    {
+        "make": "Audi",
+        "model": "RS6 Avant",
+        "engine": "V8",
+        "hp": 621,
+        "year": 2025
+    },
+    {
+        "make": "Audi",
+        "model": "TT Quattro",
+        "engine": "V6",
+        "hp": 250,
+        "year": 2006
+    },
+    {
+        "make": "Audi",
+        "model": "RSQ8",
+        "engine": "V8",
+        "hp": 591,
+        "year": 2025
+    },
+    {
+        "make": "Volkswagen",
+        "model": "Beetle",
+        "engine": "Flat-4",
+        "hp": 25,
+        "year": 1938
+    },
+     {
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "engine": "I4",
+        "hp": 215,
+        "year": 2025
+    },
+     {
+        "make": "Volkswagen",
+        "model": "Golf GTI",
+        "engine": "I4",
+        "hp": 241,
+        "year": 2025
+    },
+     {
+        "make": "Volkswagen",
+        "model": "Touareg W12",
+        "engine": "W12",
+        "hp": 444,
+        "year": 2010
+    },
+    {
         "make": "Chevrolet",
         "model": "Corvette C4",
         "engine": "V8",
@@ -65,17 +294,108 @@
         "year": 1994
     },
     {
+        "make": "Chevrolet",
+        "model": "Corvette C8 Z06",
+        "engine": "V8",
+        "hp": 670,
+        "year": 2023
+    },
+    {
+        "make": "Chevrolet",
+        "model": "Camero LT1",
+        "engine": "V8",
+        "hp": 460,
+        "year": 2023
+    },
+    {
+        "make": "Cadillac",
+        "model": "CT5-V Blacwing",
+        "engine": "V8",
+        "hp": 668,
+        "year": 2025
+    },
+    {
+        "make": "Cadillac",
+        "model": "Escalade-V",
+        "engine": "V8",
+        "hp": 682,
+        "year": 2025
+    },
+    {
         "make": "BMW",
-        "model": "M2",
+        "model": "M2 G87",
         "engine": "I6",
         "hp": 473,
         "year": 2025
+    },
+    {
+        "make": "BMW",
+        "model": "M3 G80",
+        "engine": "I6",
+        "hp": 473,
+        "year": 2025
+    },
+    {
+        "make": "BMW",
+        "model": "M4",
+        "engine": "I6",
+        "hp": 473,
+        "year": 2025
+    },
+    {
+        "make": "BMW",
+        "model": "M5",
+        "engine": "V8",
+        "hp": 717,
+        "year": 2025
+    },
+    {
+        "make": "BMW",
+        "model": "M8",
+        "engine": "V8",
+        "hp": 617,
+        "year": 2025
+    },
+    {
+        "make": "BMW",
+        "model": "I8",
+        "engine": "I3",
+        "hp": 369,
+        "year": 2020
     },
     {
         "make": "Dodge",
         "model": "Challenger SRT Hellcat",
         "engine": "V8",
         "hp": 717,
+        "year": 2023
+    },
+    {
+        "make": "Dodge",
+        "model": "Viper Gen 1",
+        "engine": "V10",
+        "hp": 450,
+        "year": 1992
+    },
+    {
+        "make": "Dodge",
+        "model": "Viper ACR",
+        "engine": "V10",
+        "hp": 645,
+        "year": 2017
+    },
+    {
+        "make": "Dodge",
+        "model": "Demon 170",
+        "engine": "V8",
+        "hp": 1025,
+        "year": 2023
+    },
+    {
+        "make": "Dodge",
+        "model": "Charger SRT Hellcat",
+        "engine": "V8",
+        "hp": 797,
         "year": 2023
     },
     {
@@ -114,11 +434,123 @@
         "year": 2025
     },
     {
+        "make": "McLaren",
+        "model": "675LT",
+        "engine": "V8",
+        "hp": 755,
+        "year": 2024
+    },
+    {
+        "make": "McLaren",
+        "model": "F1",
+        "engine": "765LT",
+        "hp": 755,
+        "year": 2024
+    },
+    {
+        "make": "McLaren",
+        "model": "GT",
+        "engine": "V8",
+        "hp": 612,
+        "year": 2025
+    },
+    {
+        "make": "McLaren",
+        "model": "Senna",
+        "engine": "V8",
+        "hp": 789,
+        "year": 2025
+    },
+    {
+        "make": "McLaren",
+        "model": "F1",
+        "engine": "V12",
+        "hp": 618,
+        "year": 1992
+    },
+    {
+        "make": "McLaren",
+        "model": "P1",
+        "engine": "V8",
+        "hp": 903,
+        "year": 2015
+    },
+    {
+        "make": "McLaren",
+        "model": "W1",
+        "engine": "V8",
+        "hp": 1275,
+        "year": 2025
+    },
+    {
+        "make": "Bentley",
+        "model": "Continental GT",
+        "engine": "W12",
+        "hp": 1275,
+        "year": 2025
+    },
+    {
+        "make": "Bentley",
+        "model": "Bacalar",
+        "engine": "W12",
+        "hp": 659,
+        "year": 2025
+    },
+    {
+        "make": "Rolls Royce",
+        "model": "Spectre",
+        "engine": "Electric",
+        "hp": 577,
+        "year": 2025
+    },
+    {
+        "make": "Rolls Royce",
+        "model": "Wraith",
+        "engine": "V12",
+        "hp": 624,
+        "year": 2025
+    },
+    {
         "make": "Porsche",
         "model": "911 S/T",
         "engine": "Flat-6",
         "hp": 518,
         "year": 2025
+    },
+    {
+        "make": "Porsche",
+        "model": "911 Turbo S",
+        "engine": "Flat-6",
+        "hp": 640,
+        "year": 2025
+    },
+    {
+        "make": "Porsche",
+        "model": "911 GT3 RS",
+        "engine": "Flat-6",
+        "hp": 640,
+        "year": 2025
+    },
+    {
+        "make": "Porsche",
+        "model": "Carrera GT",
+        "engine": "V10",
+        "hp": 518,
+        "year": 2007
+    },
+    {
+        "make": "Porsche",
+        "model": "918 Spyder",
+        "engine": "V8",
+        "hp": 887,
+        "year": 2015
+    },
+    {
+        "make": "Porsche",
+        "model": "717 Cayman GT4",
+        "engine": "Flat-6",
+        "hp": 394,
+        "year": 2023
     },
     {
         "make": "Mercedes",
@@ -128,20 +560,102 @@
         "year": 2025
     },
     {
+        "make": "Mercedes",
+        "model": "300SL Gullwing",
+        "engine": "I6",
+        "hp": 215,
+        "year": 1954
+    },
+    {
+        "make": "Mercedes",
+        "model": "SLR McLaren",
+        "engine": "V8",
+        "hp": 617,
+        "year": 2003
+    },
+    {
+        "make": "Mercedes",
+        "model": "AMG One",
+        "engine": "V6",
+        "hp": 1049,
+        "year": 2025
+    },
+    {
+        "make": "Mercedes",
+        "model": "CLK GTR",
+        "engine": "V12",
+        "hp": 612,
+        "year": 1998
+    },
+    {
         "make": "Bugatti",
         "model": "Chiron Super Sport",
         "engine": "W16",
         "hp": 1578,
         "year": 2016
-
     },
-     {
+    {
         "make": "Bugatti",
         "model": "Tourbillion",
         "engine": "V16",
         "hp": 1800,
         "year": 2026
-
+    },
+    {
+        "make": "Bugatti",
+        "model": "Veyron Super Sport",
+        "engine": "W16",
+        "hp": 1200,
+        "year": 2010
+    },
+    {
+        "make": "Bugatti",
+        "model": "Mistral",
+        "engine": "W16",
+        "hp": 1578,
+        "year": 2024
+    },
+    {
+        "make": "Bugatti",
+        "model": "Bolide",
+        "engine": "W16",
+        "hp": 1578,
+        "year": 2016
+    },
+    {
+        "make": "Bugatti",
+        "model": "EB110",
+        "engine": "V12",
+        "hp": 603,
+        "year": 1991
+    },
+    {
+        "make": "Rimac",
+        "model": "Nevera",
+        "engine": "Electric",
+        "hp": 1914,
+        "year": 2025
+    },
+    {
+        "make": "Pagani",
+        "model": "Zonda R",
+        "engine": "V12",
+        "hp": 740,
+        "year": 1999
+    },
+    {
+        "make": "Pagani",
+        "model": "Huayra R",
+        "engine": "V12",
+        "hp": 850,
+        "year": 2021
+    },
+    {
+        "make": "Pagani",
+        "model": "Utopia",
+        "engine": "V12",
+        "hp": 852,
+        "year": 2025
     },
     {
         "make": "Toyota",
@@ -151,10 +665,178 @@
         "year": 2025
     },
     {
+        "make": "Toyota",
+        "model": "Supra Mk4",
+        "engine": "I6",
+        "hp": 320,
+        "year": 1993
+    },
+    {
+        "make": "Toyota",
+        "model": "Supra Mk5",
+        "engine": "I6",
+        "hp": 382,
+        "year": 2025
+    },
+    {
+        "make": "Toyota",
+        "model": "GR Corolla",
+        "engine": "I3",
+        "hp": 300,
+        "year": 2025
+    },
+    {
+        "make": "Toyota",
+        "model": "GR86",
+        "engine": "I4",
+        "hp": 228,
+        "year": 2025
+    },
+    {
+        "make": "Toyota",
+        "model": "AE86",
+        "engine": "I4",
+        "hp": 130,
+        "year": 1985
+    },
+    {
+        "make": "Lexus",
+        "model": "LFA",
+        "engine": "V10",
+        "hp": 552,
+        "year": 2012
+    },
+    {
+        "make": "Lexus",
+        "model": "LC500",
+        "engine": "v8",
+        "hp": 471,
+        "year": 2025
+    },
+    {
+        "make": "Lexus",
+        "model": "IS 500 F Sport",
+        "engine": "V8",
+        "hp": 472,
+        "year": 2025
+    },
+    {
+        "make": "Lexus",
+        "model": "GS F",
+        "engine": "V8",
+        "hp": 467,
+        "year": 2020
+    },
+    {
+        "make": "Ferrari",
+        "model": "F40",
+        "engine": "V8",
+        "hp": 471,
+        "year": 1987
+    },
+    {
+        "make": "Ferrari",
+        "model": "F50",
+        "engine": "V12",
+        "hp": 512,
+        "year": 1995
+    },
+    {
+        "make": "Ferrari",
+        "model": "Enzo",
+        "engine": "V12",
+        "hp": 651,
+        "year": 2002
+    },
+    {
+        "make": "Ferrari",
+        "model": "LaFerrari",
+        "engine": "V12",
+        "hp": 950,
+        "year": 2013
+    },
+    {
         "make": "Ferrari",
         "model": "Daytona SP3",
         "engine": "V12",
         "hp": 829,
+        "year": 2025
+    },
+    {
+        "make": "Ferrari",
+        "model": "250 GTO",
+        "engine": "V12",
+        "hp": 300,
+        "year": 1962
+    },
+    {
+        "make": "Ferrari",
+        "model": "812 Superfast",
+        "engine": "V12",
+        "hp": 789,
+        "year": 2023
+    },
+    {
+        "make": "Ferrari",
+        "model": "Purosangue",
+        "engine": "V12",
+        "hp": 715,
+        "year": 2025
+    },
+    {
+        "make": "Ferrari",
+        "model": "SF90 Stradale",
+        "engine": "V8",
+        "hp": 986,
+        "year": 2025
+    },
+    {
+        "make": "Jaguar",
+        "model": "F Type R",
+        "engine": "V8",
+        "hp": 575,
+        "year": 2024
+    },
+    {
+        "make": "Maserati",
+        "model": "MC12",
+        "engine": "V12",
+        "hp": 400,
+        "year": 2005
+    },
+    {
+        "make": "Maserati",
+        "model": "MC20",
+        "engine": "V6",
+        "hp": 621,
+        "year": 2025
+    },
+    {
+        "make": "Maserati",
+        "model": "GranTurismo",
+        "engine": "V8",
+        "hp": 454,
+        "year": 2018
+    },
+    {
+        "make": "Alfa Romeo",
+        "model": "4C Spider",
+        "engine": "I4",
+        "hp": 237,
+        "year": 2024
+    },
+    {
+        "make": "Alfa Romeo",
+        "model": "33 Stradale",
+        "engine": "V6",
+        "hp": 620,
+        "year": 2024
+    },
+    {
+        "make": "Alfa Romeo",
+        "model": "Giulia Quadrifoglio",
+        "engine": "V6",
+        "hp": 505,
         "year": 2025
     },
     {
@@ -163,8 +845,61 @@
         "engine": "V6",
         "hp": 565,
         "year": 2024
+    },
+    {
+        "make": "Nissan",
+        "model": "Juke-R",
+        "engine": "V6",
+        "hp": 545,
+        "year": 2015
+    },
+    {
+        "make": "Nissan",
+        "model": "370z",
+        "engine": "V6",
+        "hp": 350,
+        "year": 2020
+    },
+    {
+        "make": "Nissan",
+        "model": "Z",
+        "engine": "V6",
+        "hp": 400,
+        "year": 2025
+    },
+    {
+        "make": "Subaru",
+        "model": "WRX STI",
+        "engine": "Flat-4",
+        "hp": 276,
+        "year": 1994
+    },
+    {
+        "make": "Subaru",
+        "model": "Baja",
+        "engine": "Flat-4",
+        "hp": 210,
+        "year": 2006
+    },
+    {
+        "make": "Subaru",
+        "model": "Legacy",
+        "engine": "Flat-4",
+        "hp": 182,
+        "year": 2015
+    },
+    {
+        "make": "Mitsubishi",
+        "model": "GT3000 VR-4",
+        "engine": "V6",
+        "hp": 300,
+        "year": 2000
+    },
+    {
+        "make": "Mitsubishi",
+        "model": "Lancer Evo",
+        "engine": "I4",
+        "hp": 244,
+        "year": 1994
     }
-
-
-
 ]
